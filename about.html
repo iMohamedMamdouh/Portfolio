@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Flutter Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-section {
+            padding: 120px 5% 5rem;
+            background: var(--white);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-text {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .experience-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .experience-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .experience-card ul {
+            list-style: none;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .experience-card li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-header">
+                    <h1>About Me</h1>
+                    <p>Passionate Flutter Developer with a focus on creating beautiful and functional mobile applications</p>
+                </div>
+
+                <div class="about-text">
+                    <p>I am a dedicated Flutter developer with a strong passion for creating cross-platform mobile applications that deliver exceptional user experiences. With expertise in both UI/UX design and backend integration, I strive to build applications that are not only visually appealing but also performant and scalable.</p>
+                    
+                    <p>My journey in mobile development began with a deep interest in creating solutions that make a difference in people's lives. I specialize in building responsive, intuitive, and feature-rich applications using Flutter and Dart, while also maintaining a strong foundation in mobile development best practices.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h3>Development Approach</h3>
+                        <ul>
+                            <li>Clean Architecture implementation</li>
+                            <li>State management solutions</li>
+                            <li>RESTful API integration</li>
+                            <li>Firebase services integration</li>
+                            <li>Cross-platform compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h3>Technical Expertise</h3>
+                        <ul>
+                            <li>Flutter & Dart programming</li>
+                            <li>Mobile UI/UX design</li>
+                            <li>Backend integration</li>
+                            <li>Database management</li>
+                            <li>Version control (Git)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/iMohamedMamdouh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2024 Flutter Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

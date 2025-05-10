@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Flutter Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .skills-section {
+            padding: 120px 5% 5rem;
+            background: var(--white);
+        }
+
+        .skills-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .skills-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            margin-bottom: 4rem;
+        }
+
+        .skills-category h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(44, 83, 100, 0.1),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .skill-card:hover::before {
+            left: 100%;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: scale(1.2);
+        }
+
+        .skill-card h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-content {
+            flex-grow: 1;
+        }
+
+        .skill-level {
+            height: 6px;
+            background: var(--light-bg);
+            border-radius: 3px;
+            margin-top: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-level-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+            width: 0;
+            position: relative;
+            overflow: hidden;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .skill-level-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            100% {
+                left: 100%;
+            }
+        }
+
+        .skill-card.animate .skill-level-bar {
+            width: var(--skill-level);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tool-item {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-item:hover i {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="skills-section">
+            <div class="skills-header">
+                <h1>Technical Skills</h1>
+                <p>My expertise and proficiency in various technologies</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h2>Core Technologies</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="95">
+                            <div class="skill-content">
+                                <h3>Flutter</h3>
+                                <p>Cross-platform mobile development</p>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-level-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="90">
+                            <i class="fas fa-code skill-icon"></i>
+                            <div class="skill-content">
+                                <h3>Dart</h3>
+                                <p>Programming language</p>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-level-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="90">
+                            <i class="fas fa-mobile-alt skill-icon"></i>
+                            <h3>Mobile Development</h3>
+                            <p>iOS & Android development</p>
+                            <div class="skill-level">
+                                <div class="skill-level-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h2>State Management & Architecture</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="90">
+                            <i class="fas fa-cube skill-icon"></i>
+                            <h3>BLoC Pattern</h3>
+                            <p>State management solution</p>
+                            <div class="skill-level">
+                                <div class="skill-level-bar" ></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="85">
+                            <i class="fas fa-sitemap skill-icon"></i>
+                            <h3>Clean Architecture</h3>
+                            <p>Software design pattern</p>
+                            <div class="skill-level">
+                                <div class="skill-level-bar" ></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="88">
+                            <i class="fas fa-database skill-icon"></i>
+                            <h3>Firebase</h3>
+                            <p>Backend as a Service</p>
+                            <div class="skill-level">
+                                <div class="skill-level-bar" ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h2>Development Tools</h2>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <i class="fab fa-git-alt"></i>
+                            <h4>Git</h4>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-github"></i>
+                            <h4>GitHub</h4>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-figma"></i>
+                            <h4>Figma</h4>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-terminal"></i>
+                            <h4>Terminal</h4>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-code"></i>
+                            <h4>VS Code</h4>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-bug"></i>
+                            <h4>Debugging</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/iMohamedMamdouh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2024 Flutter Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
