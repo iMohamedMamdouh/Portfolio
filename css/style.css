@@ -47,6 +47,19 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
+    z-index: 1001;
+}
+
+.logo a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.logo a:hover {
+    color: var(--light-bg);
 }
 
 .nav-links {
@@ -295,11 +308,25 @@ footer {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.social-links a:hover {
-    color: var(--light-bg);
-    background: #2196F3;
+.social-links a[href*="github"]:hover {
+    color: var(--white);
+    background: #333;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-links a[href*="linkedin"]:hover {
+    color: var(--white);
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-links a[href*="facebook"]:hover {
+    color: var(--white);
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .social-links a i {
@@ -314,10 +341,46 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--primary-color);
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+        z-index: 1000;
+    }
+    
+    .nav-links.mobile-nav-active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
     }
 
     .hamburger {
         display: flex;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .hero-content h1 {

@@ -3,7 +3,8 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('mobile-nav-active');
+    hamburger.classList.toggle('active');
 });
 
 // Smooth scrolling for navigation links
