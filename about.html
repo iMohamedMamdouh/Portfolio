@@ -3,84 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Portfolio</title>
+    <title>About — Mohamed Mamdoh</title>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .about-section {
-            padding: 120px 5% 5rem;
-            background: var(--white);
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .about-header h1 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
-
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .experience-card {
-            background: var(--light-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .experience-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .experience-card ul {
-            list-style: none;
-        }
-
-        .experience-card li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-color);
-        }
-
-        .experience-card li:before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html">Portfolio</a></div>
+        <div class="logo"><a href="index.html"><img class="brand-mark" src="./images/logo.svg" alt="MM monogram" width="36" height="36">Mohamed Mamdoh</a></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
@@ -88,48 +19,43 @@
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
     <main>
-        <section class="about-section">
-            <div class="about-content">
-                <div class="about-header">
-                    <h1>About Me</h1>
-                    <p>Passionate Flutter Developer with a focus on creating beautiful and functional mobile applications</p>
+        <section class="section about-section">
+            <div class="about-grid">
+                <div class="about-portrait reveal">
+                    <img src="./images/logo.svg" alt="MM monogram" class="portrait-logo">
                 </div>
+                <div class="about-body reveal">
+                    <span class="eyebrow" style="color:var(--primary); text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:600;">About me</span>
+                    <h1 style="margin-top:.8rem;">Mobile apps, AI automation, and growth that actually moves sales.</h1>
+                    <p>I'm a Cairo-based developer working across three closely connected worlds: <strong>Flutter mobile apps</strong>, <strong>AI automation on n8n</strong>, and <strong>growth hacking</strong>. I currently lead AI Automation &amp; Growth at <strong>Wasilaah</strong>, after spending six months as a Fulfillment Specialist there — which gave me a hands-on view of how Odoo and Shopify really run on a busy floor.</p>
+                    <p>That mix means I don't stop at building a screen or a workflow — I follow it through to the metric it moves. In my current role I lifted sales by <strong>20% in two months</strong> by reshaping the website experience and running SMS + email campaigns, and I built an ROI tracking system on top of our customer database so every campaign reports its own return.</p>
+                    <p>On the engineering side, I work in Clean Architecture for mobile and treat automations the same way: small, observable pieces wired together. I care a lot about how things behave on slow networks, busy operations and devices that get dropped.</p>
 
-                <div class="about-text">
-                    <p>I am a dedicated Flutter developer with a strong passion for creating cross-platform mobile applications that deliver exceptional user experiences. With expertise in both UI/UX design and backend integration, I strive to build applications that are not only visually appealing but also performant and scalable.</p>
-                    
-                    <p>My journey in mobile development began with a deep interest in creating solutions that make a difference in people's lives. I specialize in building responsive, intuitive, and feature-rich applications using Flutter and Dart, while also maintaining a strong foundation in mobile development best practices.</p>
-                </div>
-
-                <div class="experience-grid">
-                    <div class="experience-card">
-                        <h3>Development Approach</h3>
-                        <ul>
-                            <li>Clean Architecture implementation</li>
-                            <li>State management solutions</li>
-                            <li>RESTful API integration</li>
-                            <li>Firebase services integration</li>
-                            <li>Cross-platform compatibility</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-card">
-                        <h3>Technical Expertise</h3>
-                        <ul>
-                            <li>Flutter & Dart programming</li>
-                            <li>Mobile UI/UX design</li>
-                            <li>Backend integration</li>
-                            <li>Database management</li>
-                            <li>Version control (Git)</li>
-                        </ul>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <h3><i class="fas fa-compass" style="color:var(--primary); margin-right:.4rem;"></i> What I do</h3>
+                            <ul>
+                                <li>Flutter mobile applications</li>
+                                <li>AI automation &amp; workflows on n8n</li>
+                                <li>Growth experiments (SMS, email, UX)</li>
+                                <li>Odoo &amp; Shopify operations</li>
+                                <li>ROI &amp; analytics on customer data</li>
+                            </ul>
+                        </div>
+                        <div class="about-card">
+                            <h3><i class="fas fa-toolbox" style="color:var(--primary); margin-right:.4rem;"></i> Technical toolkit</h3>
+                            <ul>
+                                <li>Flutter, Dart, Clean Architecture, BLoC</li>
+                                <li>n8n, webhooks, REST &amp; JSON-RPC</li>
+                                <li>Odoo &amp; Shopify integrations</li>
+                                <li>SQL / database-backed reporting</li>
+                                <li>HTML email templating, Telegram bots</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,14 +65,14 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://github.com/iMohamedMamdouh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/iMohamedMamdouh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
-            <p>&copy; 2025 Mohamed Mamdoh. All rights reserved.</p>
+            <p class="copy">&copy; 2026 Mohamed Mamdoh. Crafted in Cairo.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

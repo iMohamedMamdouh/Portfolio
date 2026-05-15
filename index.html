@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mohamed Mamdoh — Mobile, AI Automation &amp; Growth</title>
+    <meta name="description" content="I build Flutter apps, AI workflows on n8n, and growth systems that move real revenue. Maker of Barcode Flow — an Odoo-integrated barcode printing app.">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html">Portfolio</a></div>
+        <div class="logo"><a href="index.html"><img class="brand-mark" src="./images/logo.svg" alt="MM monogram" width="36" height="36">Mohamed Mamdoh</a></div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -18,108 +20,184 @@
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
     <main>
+        <!-- Hero -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Mohamed Mamdoh</h1>
-                <p>Flutter Developer | Building beautiful, cross-platform mobile applications</p>
-                <div class="cta-buttons">
-                    <a href="projects.html" class="btn primary">View Projects</a>
-                    <a href="contact.html" class="btn secondary">Contact Me</a>
+                <div class="hero-text">
+                    <span class="hero-eyebrow"><span class="dot"></span> Mobile · AI Automation · Growth</span>
+                    <h1>I build apps and automations that move <span class="accent">real revenue</span>.</h1>
+                    <p class="lead">Mobile developer and AI-automation engineer at Wasilaah. I ship Flutter apps, design n8n workflows that recover carts and route operations, and run growth experiments that move sales — recently <strong>+20% in 2 months</strong>.</p>
+                    <div class="cta-buttons">
+                        <a href="projects.html" class="btn primary"><i class="fas fa-folder-open"></i> View Projects</a>
+                        <a href="contact.html" class="btn secondary"><i class="fas fa-paper-plane"></i> Get in touch</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div class="item"><strong>+20%</strong><span>Sales lift in 2 months</span></div>
+                        <div class="item"><strong>1000+</strong><span>Customer cases resolved</span></div>
+                        <div class="item"><strong>n8n · Flutter</strong><span>Automation &amp; mobile</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="badge"><i class="fas fa-barcode"></i> Barcode Flow</div>
+                    <div class="hero-promo">
+                        <img src="./images/barcode-flow/profile_barcode_flow.png" alt="Barcode Flow promo">
+                    </div>
+                    <div class="hero-strip">
+                        <div class="strip-thumb"><img src="./images/barcode-flow/screen-1.png" alt="Login"></div>
+                        <div class="strip-thumb"><img src="./images/barcode-flow/screen-2.png" alt="Products"></div>
+                        <div class="strip-thumb"><img src="./images/barcode-flow/screen-3.png" alt="Variants"></div>
+                        <div class="strip-thumb"><img src="./images/barcode-flow/screen-4.png" alt="Print"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./images/tourscan.png" alt="TourScan App" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Featured: Barcode Flow -->
+        <section class="section featured">
+            <div class="featured-card">
+                <div class="featured-info reveal">
+                    <span class="tag">FEATURED PROJECT</span>
+                    <h2>Barcode Flow — Print barcode labels with speed and precision.</h2>
+                    <p>A responsive mobile and tablet application that connects directly to Odoo so every printed label matches the live record. Built for a furniture factory's packing line, it eliminates name mismatches and keeps inventory tracking clean.</p>
+                    <p class="callout">Wasilaah Packaging — a barcode printing app tied directly into the packing workflow. It handles printing and formatting so inventory tracking stays clean, and was designed in Arabic to prevent product-name mismatches with the system. Because the app is connected to Odoo in real time, every product and label on the floor matches the official record.</p>
+                    <ul class="featured-bullets">
+                        <li><i class="fas fa-check-circle"></i> Secure login with per-user permissions</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time printing via TSPL thermal printers</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive UI that works on phones and tablets</li>
+                        <li><i class="fas fa-check-circle"></i> Clean Architecture — maintainable, scalable code</li>
+                    </ul>
+                    <div class="featured-actions">
+                        <a href="projects.html" class="btn primary"><i class="fas fa-arrow-right"></i> See project details</a>
+                        <a href="https://www.linkedin.com/posts/imohamedmamdoh_flutter-odoo-mobileapp-ugcPost-7455639770967306240-fTFq" target="_blank" rel="noopener" class="btn secondary"><i class="fab fa-linkedin"></i> View on LinkedIn</a>
                     </div>
-                    <h3>TourScan App</h3>
-                    <p>A Flutter application showcasing modern UI/UX design</p>
-                    <a href="projects.html" class="btn small">Learn More</a>
                 </div>
-                <div class="project-card">
+                <div class="featured-visual reveal">
+                    <div class="main-img">
+                        <img src="./images/barcode-flow/profile_barcode_flow.png" alt="Barcode Flow on tablet and phone">
+                    </div>
+                    <div class="featured-thumbs">
+                        <div class="thumb"><img src="./images/barcode-flow/screen-1.png" alt="Login screen"></div>
+                        <div class="thumb"><img src="./images/barcode-flow/screen-2.png" alt="Products list"></div>
+                        <div class="thumb"><img src="./images/barcode-flow/screen-3.png" alt="Product variants"></div>
+                        <div class="thumb"><img src="./images/barcode-flow/screen-4.png" alt="Print bottom sheet"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other projects -->
+        <section class="section">
+            <div class="section-header">
+                <span class="eyebrow">More work</span>
+                <h2>Selected projects</h2>
+                <p>A short look at other apps and experiments I've shipped.</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <img src="./images/tourscan.png" alt="TourScan App">
+                    </div>
+                    <div class="project-content">
+                        <h3>TourScan</h3>
+                        <p>A tourism companion with QR scanning, location-aware guides, and Firebase backend.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">QR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/iMohamedMamdouh/TourScan_v2" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
                     <div class="project-image">
                         <img src="./images/Note.jpg" alt="Note App">
                     </div>
-                    <h3>Note App</h3>
-                    <p>A Flutter note-taking application with clean design and smooth functionality</p>
-                    <a href="projects.html" class="btn small">Learn More</a>
-                </div>
-                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Note Space</h3>
+                        <p>A focused note-taking app with offline storage, clean UI and smooth interactions.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Hive</span>
+                            <span class="project-tag">Provider</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/iMohamedMamdouh/note_space" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
                     <div class="project-image">
-                        <img src="./images/ecommerce.PNG" alt="Anvil store" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./images/ecommerce.PNG" alt="Anvil Store">
                     </div>
-                    <h3>Anvil store</h3>
-                    <p>A modern e-commerce application for fashion retail with elegant UI</p>
-                    <a href="projects.html" class="btn small">Learn More</a>
-                </div>
+                    <div class="project-content">
+                        <h3>Anvil Store</h3>
+                        <p>A fashion e-commerce site with product catalog and cart flow, deployed on GitHub Pages.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/iMohamedMamdouh/Anvil" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://imohamedmamdouh.github.io/Anvil/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-date">
-                        <span>2024 - 2025</span>
-                    </div>
-                    <div class="experience-content">
-                        <h3>Instructor</h3>
-                        <h4>Ministry of Communications and Information Technology (MCIT), Egypt</h4>
-                        <ul>
-                            <li>Part-time Instructor at MCIT</li>
-                            <li>Teaching and mentoring students in technology and communications</li>
-                            <li>Contributing to educational programs and curriculum development</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-date">
-                        <span>2023 - 2024</span>
-                    </div>
-                    <div class="experience-content">
-                        <h3>Freelancer</h3>
-                        <h4>Independent Developer</h4>
-                        <ul>
-                            <li>Working on various freelance projects</li>
-                            <li>Developing mobile and web applications</li>
-                            <li>Managing client relationships and project timelines</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Experience -->
+        <section class="section experience">
+            <div class="section-header">
+                <span class="eyebrow">Career</span>
+                <h2>Professional experience</h2>
             </div>
-        </section>
-
-        <section class="skills-preview">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Development</h3>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="date">Mar 2026 — Present</div>
+                    <h3>AI Automation &amp; Growth</h3>
+                    <h4>Wasilaah · Cairo</h4>
+                    <ul>
+                        <li>Designing and shipping n8n automations across the storefront, ops and finance stack</li>
+                        <li>Built Cart Recovery, Confirmation Email, Auto-Reply (with Telegram approvals) and a Refund Form for Finance</li>
+                        <li>Lifted sales by <strong>+20%</strong> in two months via website UX optimization and SMS / email campaigns</li>
+                        <li>Built an ROI tracking system on top of the customer database to measure campaign return</li>
+                    </ul>
                 </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Firebase</h3>
+                <div class="timeline-item reveal">
+                    <div class="date">Aug 2025 — Feb 2026</div>
+                    <h3>Fulfillment Specialist</h3>
+                    <h4>Wasilaah · Cairo</h4>
+                    <ul>
+                        <li>Owned Odoo and Shopify operations across orders, inventory and after-sales</li>
+                        <li>Resolved <strong>1000+</strong> customer issues with measurable improvements in CSAT and turnaround</li>
+                        <li>Tightened the bridge between storefront, warehouse and finance workflows</li>
+                    </ul>
                 </div>
-                <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
+                <div class="timeline-item reveal">
+                    <div class="date">2024 — Jul 2025</div>
+                    <h3>Instructor</h3>
+                    <h4>Ministry of Communications and Information Technology (MCIT), Egypt</h4>
+                    <ul>
+                        <li>Part-time instructor mentoring students in mobile and software development</li>
+                        <li>Contributed to curriculum design and hands-on lab sessions</li>
+                    </ul>
                 </div>
-                <div class="skill-item">
-                    <i class="fas fa-server"></i>
-                    <h3>Backend Development</h3>
+                <div class="timeline-item reveal">
+                    <div class="date">2023 — 2024</div>
+                    <h3>Freelance Mobile Developer</h3>
+                    <h4>Independent</h4>
+                    <ul>
+                        <li>Shipped Flutter applications for clients across furniture, retail and services</li>
+                        <li>Integrated Odoo, REST APIs, Firebase and thermal-printer hardware</li>
+                        <li>Managed client relationships, scope and delivery timelines end-to-end</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -128,14 +206,14 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://github.com/iMohamedMamdouh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/iMohamedMamdouh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
-            <p>&copy; 2025 Mohamed Mamdoh. All rights reserved.</p>
+            <p class="copy">&copy; 2026 Mohamed Mamdoh. Crafted in Cairo.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

@@ -3,124 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - ortfolio</title>
+    <title>Projects — Mohamed Mamdoh</title>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .projects-section {
-            padding: 120px 5% 5rem;
-            background: var(--white);
-        }
-
-        .projects-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .projects-header h1 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-image {
-            height: 200px;
-            background: var(--light-bg);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content p {
-            color: var(--text-color);
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .project-tag {
-            background: var(--light-bg);
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-tag:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html">Portfolio</a></div>
+        <div class="logo"><a href="index.html"><img class="brand-mark" src="./images/logo.svg" alt="MM monogram" width="36" height="36">Mohamed Mamdoh</a></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -128,48 +19,87 @@
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
     <main>
-        <section class="projects-section">
-            <div class="projects-header">
-                <h1>My Projects</h1>
-                <p>Mohamed Mamdoh's Flutter development work and achievements</p>
+        <section class="section projects-section">
+            <div class="section-header">
+                <span class="eyebrow">Portfolio</span>
+                <h2>Projects</h2>
+                <p>Flutter applications, AI automations and growth systems I've shipped — from production apps on the floor to n8n workflows quietly running in the background.</p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+                <button type="button" class="filter-btn active" data-filter="all" role="tab">
+                    <i class="fas fa-th-large"></i> All <span class="count">9</span>
+                </button>
+                <button type="button" class="filter-btn" data-filter="mobile" role="tab">
+                    <i class="fas fa-mobile-alt"></i> Mobile <span class="count">5</span>
+                </button>
+                <button type="button" class="filter-btn" data-filter="automation" role="tab">
+                    <i class="fas fa-robot"></i> Automation <span class="count">4</span>
+                </button>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./images/tourscan.png" alt="TourScan App">
-                    </div>
-                    <div class="project-content">
-                        <h3>TourScan App</h3>
-                        <p>A comprehensive tourism application built with Flutter, featuring QR code scanning, location-based services, and interactive tourist guides.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Flutter</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">QR Scanner</span>
-                            <span class="project-tag">Maps</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/iMohamedMamdouh/TourScan_v2" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
+
+                <div class="category-divider" data-category="mobile">
+                    <span class="badge">Mobile</span>
+                    <h3>Flutter applications</h3>
+                    <span class="line"></span>
                 </div>
 
-                <div class="project-card">
+                <!-- ANVIL STORE -->
+                <article class="project-card mobile-card reveal" data-category="mobile">
                     <div class="project-image">
-                        <img src="./images/Note.jpg" alt="Note App">
+                        <span class="corner">Web · 2023</span>
+                        <img src="./images/ecommerce.PNG" alt="Anvil Store">
                     </div>
                     <div class="project-content">
-                        <h3>Note App</h3>
-                        <p>A modern note-taking application built with Flutter, featuring clean design, local storage, and intuitive user interface for managing personal notes and tasks.</p>
+                        <h3>Anvil Store</h3>
+                        <p class="short-desc">A fashion e-commerce front-end built with vanilla HTML, CSS and JavaScript — product catalog, cart flow and clean responsive layout.</p>
+                        <div class="extended-desc">
+                            <ul class="featured-bullets">
+                                <li><i class="fas fa-check-circle"></i> Hand-coded responsive layout for desktop and mobile</li>
+                                <li><i class="fas fa-check-circle"></i> Product catalog with filtering and detail pages</li>
+                                <li><i class="fas fa-check-circle"></i> Cart flow with client-side state management</li>
+                                <li><i class="fas fa-check-circle"></i> Deployed and live on GitHub Pages</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="expand-btn"><i class="fas fa-chevron-down"></i> <span>Show more</span></button>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">E-commerce</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/iMohamedMamdouh/Anvil" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://imohamedmamdouh.github.io/Anvil/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NOTE SPACE -->
+                <article class="project-card mobile-card reveal" data-category="mobile">
+                    <div class="project-image">
+                        <span class="corner">Flutter · 2024</span>
+                        <img src="./images/Note.jpg" alt="Note Space App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Note Space</h3>
+                        <p class="short-desc">A focused note-taking app built with Flutter — clean design, offline-first storage with Hive, and a quick-capture flow for ideas and tasks.</p>
+                        <div class="extended-desc">
+                            <ul class="featured-bullets">
+                                <li><i class="fas fa-check-circle"></i> Offline-first with Hive local database</li>
+                                <li><i class="fas fa-check-circle"></i> Provider state management for predictable updates</li>
+                                <li><i class="fas fa-check-circle"></i> Clean UI/UX with light and dark modes</li>
+                                <li><i class="fas fa-check-circle"></i> Fast search and quick capture flows</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="expand-btn"><i class="fas fa-chevron-down"></i> <span>Show more</span></button>
                         <div class="project-tags">
                             <span class="project-tag">Flutter</span>
                             <span class="project-tag">Hive</span>
@@ -177,32 +107,236 @@
                             <span class="project-tag">UI/UX</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/iMohamedMamdouh/note_space" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/iMohamedMamdouh/note_space" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <!-- TOURSCAN -->
+                <article class="project-card mobile-card reveal" data-category="mobile">
                     <div class="project-image">
-                        <img src="./images/ecommerce.PNG" alt="Anvil store">
+                        <span class="corner">Flutter · 2024</span>
+                        <img src="./images/tourscan.png" alt="TourScan App">
                     </div>
                     <div class="project-content">
-                        <h3>Anvil store</h3>
-                        <p>A feature-rich e-commerce application for fashion retail, built with Flutter. Includes product catalog, shopping cart, user authentication, and secure payment integration.</p>
+                        <h3>TourScan</h3>
+                        <p class="short-desc">A Flutter tourism companion — scan a QR at a landmark, get a curated guide, location services and live content via Firebase.</p>
+                        <div class="extended-desc">
+                            <ul class="featured-bullets">
+                                <li><i class="fas fa-check-circle"></i> QR code scanning that opens a curated guide for each landmark</li>
+                                <li><i class="fas fa-check-circle"></i> Location-based services for nearby points of interest</li>
+                                <li><i class="fas fa-check-circle"></i> Firebase backend for live content and authentication</li>
+                                <li><i class="fas fa-check-circle"></i> Interactive maps and clean, focused UI</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="expand-btn"><i class="fas fa-chevron-down"></i> <span>Show more</span></button>
                         <div class="project-tags">
-                            <span class="project-tag">Html</span>
-                            <span class="project-tag">Css</span>
-                            <span class="project-tag">Js</span>
-
-                            <span class="project-tag">E-commerce</span>
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">QR Scanner</span>
+                            <span class="project-tag">Maps</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/iMohamedMamdouh/Anvil" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://imohamedmamdouh.github.io/Anvil/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/iMohamedMamdouh/TourScan_v2" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
+                </article>
+
+                <!-- CHALLENGE & RISK -->
+                <article class="project-card mobile-card reveal" data-category="mobile">
+                    <div class="project-image">
+                        <span class="corner">Flutter · 2025</span>
+                        <img src="./images/challenge_and_risk/Challenge_profile.png" alt="Challenge &amp; Risk profile">
+                    </div>
+                    <div class="project-content">
+                        <h3>Challenge &amp; Risk</h3>
+                        <p class="short-desc">A social educational quiz game for 2–8 players. Correct answer = a point. Wrong answer = an interactive challenge that keeps the table engaged.</p>
+                        <div class="extended-desc">
+                            <ul class="featured-bullets">
+                                <li><i class="fas fa-check-circle"></i> Multiplayer for <strong>2 to 8 players</strong> on the same device</li>
+                                <li><i class="fas fa-check-circle"></i> Question bank with <strong>600+ questions per category</strong></li>
+                                <li><i class="fas fa-check-circle"></i> Interactive challenge system on wrong answers</li>
+                                <li><i class="fas fa-check-circle"></i> Full Arabic language support</li>
+                                <li><i class="fas fa-check-circle"></i> Goal: blend entertainment with knowledge and positive social interaction</li>
+                            </ul>
+                        </div>
+                        <div class="thumb-carousel">
+                            <button type="button" class="carousel-nav prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                            <div class="thumb-track">
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-1.png"><img src="./images/challenge_and_risk/screen-1.png" alt="Challenge &amp; Risk 1"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-2.png"><img src="./images/challenge_and_risk/screen-2.png" alt="Challenge &amp; Risk 2"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-3.png"><img src="./images/challenge_and_risk/screen-3.png" alt="Challenge &amp; Risk 3"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-4.png"><img src="./images/challenge_and_risk/screen-4.png" alt="Challenge &amp; Risk 4"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-5.png"><img src="./images/challenge_and_risk/screen-5.png" alt="Challenge &amp; Risk 5"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-6.png"><img src="./images/challenge_and_risk/screen-6.png" alt="Challenge &amp; Risk 6"></a>
+                                <a class="g-thumb" data-zoom href="./images/challenge_and_risk/screen-7.png"><img src="./images/challenge_and_risk/screen-7.png" alt="Challenge &amp; Risk 7"></a>
+                            </div>
+                            <button type="button" class="carousel-nav next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <button type="button" class="expand-btn"><i class="fas fa-chevron-down"></i> <span>Show more</span></button>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Dart</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Material Design 3</span>
+                            <span class="project-tag">Google Sign-In</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-mobile-alt"></i> App Store</a>
+                            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BARCODE FLOW — FEATURED · 2026 -->
+                <article class="project-card mobile-card reveal" data-category="mobile">
+                    <div class="project-image">
+                        <span class="corner featured">FEATURED · 2026</span>
+                        <img src="./images/barcode-flow/profile_barcode_flow.png" alt="Barcode Flow">
+                    </div>
+                    <div class="project-content">
+                        <h3>Barcode Flow</h3>
+                        <p class="short-desc">A responsive mobile &amp; tablet app for printing barcode labels, deeply integrated with Odoo so every label matches the live inventory record.</p>
+                        <div class="extended-desc">
+                            <p class="callout-en"><strong>How it works:</strong> the app is connected directly to Odoo, so every product and field shown to the operator comes from the official system in real time — guaranteeing that any label printed on the floor matches the master record.</p>
+                            <ul class="featured-bullets">
+                                <li><i class="fas fa-check-circle"></i> Secure login with per-user permissions</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time printing over TSPL thermal printers</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive UI that adapts to any screen size</li>
+                                <li><i class="fas fa-check-circle"></i> Clean Architecture for maintainable, scalable code</li>
+                            </ul>
+                            <p><strong>The result:</strong> a clearer inventory, sharper tracking and a packing team working with confidence.</p>
+                        </div>
+                        <div class="thumb-carousel">
+                            <button type="button" class="carousel-nav prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                            <div class="thumb-track">
+                                <a class="g-thumb" data-zoom href="./images/barcode-flow/screen-1.png"><img src="./images/barcode-flow/screen-1.png" alt="Login"></a>
+                                <a class="g-thumb" data-zoom href="./images/barcode-flow/screen-2.png"><img src="./images/barcode-flow/screen-2.png" alt="Products"></a>
+                                <a class="g-thumb" data-zoom href="./images/barcode-flow/screen-3.png"><img src="./images/barcode-flow/screen-3.png" alt="Variants"></a>
+                                <a class="g-thumb" data-zoom href="./images/barcode-flow/screen-4.png"><img src="./images/barcode-flow/screen-4.png" alt="Print"></a>
+                            </div>
+                            <button type="button" class="carousel-nav next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <button type="button" class="expand-btn"><i class="fas fa-chevron-down"></i> <span>Show more</span></button>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Dart</span>
+                            <span class="project-tag">Odoo</span>
+                            <span class="project-tag">TSPL Printers</span>
+                            <span class="project-tag">Clean Architecture</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/imohamedmamdoh_flutter-odoo-mobileapp-ugcPost-7455639770967306240-fTFq" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" target="_blank"><i class="fas fa-mobile-alt"></i> App Store</a>
+                            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="category-divider" data-category="automation">
+                    <span class="badge">AI Automation · n8n</span>
+                    <h3>Automation &amp; Growth at Wasilaah</h3>
+                    <span class="line"></span>
                 </div>
+
+                <!-- CART RECOVERY -->
+                <article class="project-card automation reveal" data-category="automation">
+                    <div class="project-image">
+                        <span class="corner">n8n workflow</span>
+                        <img src="./images/Abandoned_checkouts/get_abandoned.png" alt="Cart recovery n8n workflow">
+                    </div>
+                    <div class="project-content">
+                        <span class="metric"><i class="fas fa-chart-line"></i> Revenue impact tracked in DB</span>
+                        <h3>Cart Recovery Automation</h3>
+                        <p>An n8n workflow that detects abandoned Shopify checkouts and runs a multi-step recovery sequence. Every recovered order is logged to a database so the campaign's ROI is measurable in real numbers.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">n8n</span>
+                            <span class="project-tag">Shopify</span>
+                            <span class="project-tag">Google Sheets</span>
+                            <span class="project-tag">ROI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./images/Abandoned_checkouts/get_abandoned.png" target="_blank"><i class="fas fa-image"></i> Main flow</a>
+                            <a href="./images/Abandoned_checkouts/subflow_cart_recovery.png" target="_blank"><i class="fas fa-sitemap"></i> Recovery subflow</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CONFIRMATION EMAIL -->
+                <article class="project-card automation reveal" data-category="automation">
+                    <div class="project-image">
+                        <span class="corner">n8n workflow</span>
+                        <img src="./images/Confirmation_email/Confirmation_email.png" alt="Order confirmation email n8n workflow">
+                    </div>
+                    <div class="project-content">
+                        <span class="metric"><i class="fas fa-paint-brush"></i> Branded HTML template</span>
+                        <h3>Order Confirmation Email</h3>
+                        <p>Fires on every new Shopify order: pulls product images, builds a branded HTML email and ships it to the customer — replacing the default Shopify template with consistent, on-brand messaging.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">n8n</span>
+                            <span class="project-tag">Shopify Trigger</span>
+                            <span class="project-tag">HTML Email</span>
+                            <span class="project-tag">Outlook</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./images/Confirmation_email/Confirmation_email.png" target="_blank"><i class="fas fa-image"></i> View workflow</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AI AUTO-REPLY -->
+                <article class="project-card automation reveal" data-category="automation">
+                    <div class="project-image">
+                        <span class="corner">n8n + AI</span>
+                        <img src="./images/AI%20Auto-Reply/AI%20Auto-Reply.png" alt="AI Auto-Reply n8n workflow">
+                    </div>
+                    <div class="project-content">
+                        <span class="metric"><i class="fab fa-telegram"></i> Human approval via Telegram</span>
+                        <h3>AI Auto-Reply for Inbox</h3>
+                        <p>Incoming customer emails are passed through an AI step that drafts a contextual reply. Each draft is pushed to a Telegram channel for human approval before being released — keeping speed without losing the human touch.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">n8n</span>
+                            <span class="project-tag">AI Agent</span>
+                            <span class="project-tag">Outlook</span>
+                            <span class="project-tag">Telegram</span>
+                            <span class="project-tag">Google Sheets</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./images/AI%20Auto-Reply/AI%20Auto-Reply.png" target="_blank"><i class="fas fa-image"></i> View workflow</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- REFUND FORM -->
+                <article class="project-card automation reveal" data-category="automation">
+                    <div class="project-image">
+                        <span class="corner">n8n workflow</span>
+                        <img src="./images/Refund_mail/Refund_mail.png" alt="Refund form n8n workflow">
+                    </div>
+                    <div class="project-content">
+                        <span class="metric"><i class="fas fa-database"></i> Single source of truth</span>
+                        <h3>Refund Form for Finance</h3>
+                        <p>A standardized refund-request form. Submissions trigger a routed email to the finance owner and append a row to a tracked spreadsheet — replacing ad-hoc threads with a clean, auditable pipeline.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">n8n</span>
+                            <span class="project-tag">Forms</span>
+                            <span class="project-tag">Outlook</span>
+                            <span class="project-tag">Excel / Sheets</span>
+                            <span class="project-tag">Finance Ops</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./images/Refund_mail/Refund_mail.png" target="_blank"><i class="fas fa-image"></i> View workflow</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="projects-cta reveal">
+                <h3>Interested in something similar?</h3>
+                <p>If you'd like to build a mobile app, design an n8n automation, or run a growth experiment on your store — I'd love to hear what you're working on.</p>
+                <a href="contact.html" class="btn"><i class="fas fa-paper-plane"></i> &nbsp;Contact us</a>
             </div>
         </section>
     </main>
@@ -210,14 +344,36 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://github.com/iMohamedMamdouh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/iMohamedMamdouh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdoh-391690240/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/mohamed.mamdoh.958137" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
-            <p>&copy; 2025 Mohamed Mamdoh. All rights reserved.</p>
+            <p class="copy">&copy; 2026 Mohamed Mamdoh. Crafted in Cairo.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // ===== Project filter =====
+        (function(){
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.projects-grid .project-card');
+            const dividers = document.querySelectorAll('.projects-grid .category-divider');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+                    buttons.forEach(b => b.classList.toggle('active', b === btn));
+                    cards.forEach(c => {
+                        const match = filter === 'all' || c.dataset.category === filter;
+                        c.classList.toggle('hidden', !match);
+                    });
+                    dividers.forEach(d => {
+                        const match = filter === 'all' || d.dataset.category === filter;
+                        d.classList.toggle('hidden', !match);
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
-</html> 
+</html>
