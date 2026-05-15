@@ -59,6 +59,39 @@ const barObserver = new IntersectionObserver((entries, obs) => {
 }, { threshold: 0.4 });
 document.querySelectorAll('.bar[data-pct]').forEach(b => barObserver.observe(b));
 
+// ===== Thumb carousel (prev/next scroll) =====
+document.querySelectorAll('.thumb-carousel').forEach(carousel => {
+    const track = carousel.querySelector('.thumb-track');
+    const prev  = carousel.querySelector('.carousel-nav.prev');
+    const next  = carousel.querySelector('.carousel-nav.next');
+    if (!track) return;
+
+    const step = () => Math.max(140, track.clientWidth * 0.7);
+    const update = () => {
+        const max = track.scrollWidth - track.clientWidth - 2;
+        if (prev) prev.disabled = track.scrollLeft <= 2;
+        if (next) next.disabled = track.scrollLeft >= max;
+    };
+    if (prev) prev.addEventListener('click', () => { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', () => { track.scrollBy({ left:  step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+});
+
+// ===== Expandable description toggle =====
+document.querySelectorAll('.mobile-card .expand-btn').forEach(btn => {
+    const card = btn.closest('.mobile-card');
+    const ext  = card && card.querySelector('.extended-desc');
+    const label = btn.querySelector('span');
+    if (!ext) return;
+    btn.addEventListener('click', () => {
+        const open = ext.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        if (label) label.textContent = open ? 'Show less' : 'Show more';
+    });
+});
+
 // ===== Zoom-only image lightbox with prev/next navigation =====
 (function(){
     const overlay = document.createElement('div');
@@ -143,8 +176,8 @@ document.querySelectorAll('.bar[data-pct]').forEach(b => barObserver.observe(b))
         return { src: el.src, alt: el.alt || '' };
     }
 
-    // 1) Galleries that contain a[data-zoom] — group all anchors in the same .gallery
-    document.querySelectorAll('.gallery').forEach(gallery => {
+    // 1) Galleries / carousels that contain a[data-zoom] — group all anchors
+    document.querySelectorAll('.gallery, .thumb-track').forEach(gallery => {
         const anchors = Array.from(gallery.querySelectorAll('a[data-zoom]'));
         if (!anchors.length) return;
         const items = anchors.map(imgInfo);
@@ -169,9 +202,9 @@ document.querySelectorAll('.bar[data-pct]').forEach(b => barObserver.observe(b))
         imgs.forEach((img, i) => img.addEventListener('click', () => open(items, i)));
     });
 
-    // 4) Standalone a[data-zoom] anchors not inside a .gallery — open as a single-item group
+    // 4) Standalone a[data-zoom] anchors not inside a grouped container
     document.querySelectorAll('a[data-zoom]').forEach(a => {
-        if (a.closest('.gallery')) return; // already handled
+        if (a.closest('.gallery') || a.closest('.thumb-track')) return; // already handled
         a.addEventListener('click', e => {
             e.preventDefault();
             open([imgInfo(a)], 0);

@@ -74,6 +74,7 @@
                     </form>
                     <div id="successMessage" class="success-message">Your message has been sent successfully!</div>
                     <div id="errorMessage" class="error-message">There was an error sending your message. Please try again.</div>
+                    <p class="form-fallback">Prefer email? Reach me directly at <a href="mailto:imohamedmamdoh1@gmail.com">imohamedmamdoh1@gmail.com</a>.</p>
                 </div>
             </div>
         </section>
@@ -113,10 +114,15 @@
                     document.getElementById('contactForm').reset();
                     setTimeout(()=>{ successMessage.style.display='none'; }, 5000);
                 })
-                .catch(function(){
+                .catch(function(err){
+                    // Log the real error so we can debug what EmailJS rejected.
+                    console.error('[contact-form] EmailJS error:', err);
+                    const detail = (err && (err.text || err.message || (err.status ? ('HTTP ' + err.status) : ''))) || 'Unknown error';
+                    errorMessage.innerHTML =
+                        'Couldn’t send your message right now (' + detail + ').<br>' +
+                        'Please email me directly at <a href="mailto:imohamedmamdoh1@gmail.com" style="color:inherit; text-decoration:underline;">imohamedmamdoh1@gmail.com</a>.';
                     errorMessage.style.display = 'block';
                     successMessage.style.display = 'none';
-                    setTimeout(()=>{ errorMessage.style.display='none'; }, 5000);
                 })
                 .finally(function(){
                     submitBtn.disabled = false;
