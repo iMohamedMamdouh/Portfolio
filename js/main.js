@@ -44,7 +44,27 @@ const revealObserver = new IntersectionObserver((entries, obs) => {
         }
     });
 }, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Reveal any .reveal elements already within (or near) the viewport immediately on load —
+// otherwise above-the-fold content stays hidden until the user scrolls.
+function revealAlreadyVisible() {
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.classList.contains('visible')) return;
+        const rect = el.getBoundingClientRect();
+        // If top is above the bottom of the viewport (with a small offset) — show it now.
+        if (rect.top < vh - 40 && rect.bottom > 0) {
+            el.classList.add('visible');
+        } else {
+            revealObserver.observe(el);
+        }
+    });
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', revealAlreadyVisible);
+} else {
+    revealAlreadyVisible();
+}
 
 // ===== Animate skill bars =====
 const barObserver = new IntersectionObserver((entries, obs) => {
