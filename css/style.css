@@ -1513,40 +1513,13 @@ footer .copy { font-size: .85rem; color: #9fa3a8; }
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
     .hero-content { grid-template-columns: 1fr; }
-    .hero-visual { justify-self: center; margin-top: 2rem; max-width: 420px; }
-    .hero-phone { right: -6px; bottom: -16px; width: 30%; max-width: 150px; }
+    .hero-visual { justify-self: center; margin-top: 2rem; max-width: 380px; }
+    .hero-phone { right: -10px; bottom: -20px; width: 35%; }
     .featured-card { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
     .about-portrait { max-width: 320px; margin: 0 auto; }
     .contact-grid { grid-template-columns: 1fr; }
     .project-card.highlight { grid-template-columns: 1fr; }
-}
-
-/* On phone-sized screens hide the floating phone mockup entirely — the promo image already
-   shows a phone, and the overlay was crowding the layout. */
-@media (max-width: 600px) {
-    .hero-phone { display: none; }
-    .hero-visual .badge {
-        top: -10px;
-        left: 6px;
-        font-size: .8rem;
-        padding: .5rem .8rem;
-    }
-    .hero-promo { border-radius: var(--radius); }
-    .hero-strip { gap: .4rem; }
-
-    /* Compact mobile-card carousel/image on phones */
-    .project-card.mobile-card .project-image { aspect-ratio: 4/3; padding: 10px; }
-    .project-card.highlight .project-image { aspect-ratio: 4/3; padding: 1rem; }
-    .project-card .project-image { aspect-ratio: 4/3; padding: 12px; }
-
-    /* Featured/home project cards: shrink and let content breathe */
-    .projects-grid { gap: 1.2rem; }
-
-    /* Connect strip stack */
-    .connect-strip { padding: 1.4rem; }
-    .connect-channels { grid-template-columns: 1fr 1fr; }
-    .pillars-grid { gap: 1rem; }
 }
 
 @media (max-width: 720px) {
